@@ -1,5 +1,5 @@
 {
-  "name": "test",
+  "name": "cra-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -38,12 +38,6 @@
   "jest": {
     "testMatch": [
       "**/?(*.)+(test|integration|unit|spec|e2e).[jt]s?(x)"
-    ]
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
     ]
   },
   "browserslist": {
