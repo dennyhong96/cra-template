@@ -41,9 +41,7 @@ class BlockchainStore {
   }
 
   getHash(previousBlock: IBlock, transactions: string[]) {
-    const hash = sha256(
-      `${previousBlock.hash}${JSON.stringify(transactions)}`
-    ).toString();
+    const hash = sha256(`${previousBlock.hash}${JSON.stringify(transactions)}`).toString();
 
     return hash;
   }

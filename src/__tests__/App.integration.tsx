@@ -1,10 +1,6 @@
 import userEvent from "@testing-library/user-event";
 
-import {
-  render,
-  screen,
-  waitForElementToBeRemoved,
-} from "src/__tests__/testUtils";
+import { render, screen, waitForElementToBeRemoved } from "src/__tests__/testUtils";
 import Home from "src/views/Home";
 
 describe("Home page", () => {
@@ -37,9 +33,7 @@ describe("Home page", () => {
       timeout: 10 * 1000,
     });
 
-    const block = await screen.findByText((content, element) =>
-      content.includes(transactionMessage)
-    );
+    const block = await screen.findByText((content) => content.includes(transactionMessage));
     expect(block).toBeInTheDocument();
     expect(block.tagName).toBe("PRE");
     expect(block.closest("li")).toBeInTheDocument();
@@ -73,9 +67,7 @@ describe("Home page", () => {
     });
 
     for (const transactionMessage of transactionMessages) {
-      const block = await screen.findByText((content, element) =>
-        content.includes(transactionMessage)
-      );
+      const block = await screen.findByText((content) => content.includes(transactionMessage));
       expect(block).toBeInTheDocument();
       expect(block.tagName).toBe("PRE");
       expect(block.closest("li")).toBeInTheDocument();

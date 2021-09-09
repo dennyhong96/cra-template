@@ -25,9 +25,7 @@ const StoreProvider: FC<{ store: RootStore }> = ({ store, children }) => {
     return () => clearInterval(intervalId);
   }, [store]);
 
-  return (
-    <StoreContext.Provider value={store}>{children}</StoreContext.Provider>
-  );
+  return <StoreContext.Provider value={store}>{children}</StoreContext.Provider>;
 };
 
 const useStore = () => {

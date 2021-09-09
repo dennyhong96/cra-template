@@ -28,9 +28,7 @@ const Note: FC<{ note: INote }> = ({ note }) => {
           style={{ width: "max-content", marginBottom: 0, marginRight: 8 }}
           type="checkbox"
           checked={note.completed}
-          onChange={(evt) =>
-            store.noteStore.toggleCompleted(note.id, evt.target.checked)
-          }
+          onChange={(evt) => store.noteStore.toggleCompleted(note.id, evt.target.checked)}
         />
         <span
           style={{
@@ -40,10 +38,7 @@ const Note: FC<{ note: INote }> = ({ note }) => {
           {note.title}
         </span>
       </span>
-      <button
-        aria-label="Remove note"
-        onClick={() => store.noteStore.removeNote(note.id)}
-      >
+      <button aria-label="Remove note" onClick={() => store.noteStore.removeNote(note.id)}>
         x
       </button>
     </li>

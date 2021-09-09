@@ -7,8 +7,7 @@ const Title = observer(() => {
 
   return (
     <h1>
-      {store.blockchain.numberBlocks} Blocks (
-      {store.blockchain.valid ? "Valid" : "Invalid"})
+      {store.blockchain.numberBlocks} Blocks ({store.blockchain.valid ? "Valid" : "Invalid"})
     </h1>
   );
 });

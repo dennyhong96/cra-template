@@ -12,7 +12,7 @@ class NoteStore {
   root: RootStore;
 
   notes: INote[] = [];
-  newNoteText: string = "";
+  newNoteText = "";
 
   constructor(root: RootStore) {
     this.root = root;
